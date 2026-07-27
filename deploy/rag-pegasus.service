@@ -1,0 +1,32 @@
+# ---------------------------------------------------------------------------
+# rag-pegasus.service — Servicio systemd para correr el agente 24/7 en OCI.
+#
+# Instalación en la VM (ajustá el usuario 'ubuntu' si tu imagen usa otro):
+#   sudo cp deploy/rag-pegasus.service /etc/systemd/system/
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now rag-pegasus
+#   sudo systemctl status rag-pegasus        # ver estado
+#   journalctl -u rag-pegasus -f             # ver logs en vivo
+#
+# Requiere un archivo .env en WorkingDirectory con:  GEMINI_API_KEY=tu_key
+# ---------------------------------------------------------------------------
+[Unit]
+Description=Asistente Interno Santo Pegasus (RAG / Streamlit)
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/rag-agente-santo-pegasus
+EnvironmentFile=/home/ubuntu/rag-agente-santo-pegasus/.env
+ExecStart=/home/ubuntu/rag-agente-santo-pegasus/.venv/bin/streamlit run app.py \
+    --server.port 8501 \
+    --server.address 0.0.0.0 \
+    --server.headless true \
+    --server.enableCORS false \
+    --server.enableXsrfProtection false
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
