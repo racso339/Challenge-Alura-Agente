@@ -11,7 +11,7 @@ y **Guía de Ingeniería Front-end**— citando el documento y la página de cad
 Proyecto final **Alura Agente** (ONE / Oracle Next Education). Desplegado en
 **Oracle Cloud Infrastructure (OCI) Compute**.
 
-> 🔗 **App en vivo (OCI):** `http://<TU_IP_PUBLICA>:8501`
+> 🔗 **App en vivo (OCI):** `http://158.247.123.236:8501`
 > 🖼️ Captura del despliegue: ver [`docs_img/oci_running.png`](docs_img/oci_running.png)
 
 ---
