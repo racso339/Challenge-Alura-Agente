@@ -12,7 +12,7 @@ Proyecto final **Alura Agente** (ONE / Oracle Next Education). Desplegado en
 **Oracle Cloud Infrastructure (OCI) Compute**.
 
 > 🔗 **App en vivo (OCI):** `http://158.247.123.236:8501`
-> 🖼️ Captura del despliegue: ver [`docs_img/oci_running.png`](docs_img/oci_running.png)
+> 🖼️ Captura del despliegue: ver [`docs_img/Evidencia_02.png`](docs_img/Evidencia_02.png), [`docs_img/Evidencia_01.png`](docs_img/Evidencia_01.png)
 
 ---
 
